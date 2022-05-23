@@ -1,2 +1,5 @@
 pack.name = §l§2Lost World
 pack.description = InDev
+
+entity.lostworld:unknow = Unknow
+item.spawn_egg.entitylostworld:unknow = Spawn Unknow
