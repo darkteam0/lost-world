@@ -1,0 +1,1 @@
+Compress-Archive .\src\* -DestinationPath .\dist\lost_world.mcaddon -Force

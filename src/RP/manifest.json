@@ -1,17 +1,23 @@
 {
     "format_version": 2,
     "header": {
-        "name": "pack.name",
-        "description": "pack.description",
+        "name": "§l§2Lost World",
+        "description": "InDev",
         "uuid": "34579eaf-500c-4c59-a331-88df668a5447",
         "min_engine_version": [1, 18, 0],
-        "version": [0, 1, 0]
+        "version": [0, 1, 1]
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "af1366af-19e1-4413-b05b-8233cff34cb6",
-            "version": [ 0, 1, 0 ]
+            "version": [0, 1, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "934a0f53-a18e-46e2-9e77-2a39927177bf",
+            "version": [0, 1, 1]
         }
     ]
 }
