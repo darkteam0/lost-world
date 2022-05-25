@@ -1,9 +1,9 @@
-$CURRENT = pwd
+$CURRENT = Get-Location
 $MOJANG = "~\AppData\Local\Packages\Microsoft.MinecraftUWP_**\LocalState\games\com.mojang"
 
-cd $MOJANG
-$MOJANG = pwd
-cd $CURRENT
+Set-Location $MOJANG
+$MOJANG = Get-Location
+Set-Location $CURRENT
 
 $PACK_NAME = "§l§2Lost World"
 $DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME\"
@@ -13,8 +13,8 @@ $SRC = ".\src\"
 $SRC_BP = "$SRC\BP\"
 $SRC_RP = "$SRC\RP\"
 
-ri $DEV_BP* -Recurse
-ri $DEV_RP* -Recurse
+Remove-Item $DEV_BP* -Recurse
+Remove-Item $DEV_RP* -Recurse
 
-cp $SRC_BP\* $DEV_BP -Recurse
-cp $SRC_RP\* $DEV_RP -Recurse
+Copy-Item $SRC_BP\* $DEV_BP -Recurse
+Copy-Item $SRC_RP\* $DEV_RP -Recurse

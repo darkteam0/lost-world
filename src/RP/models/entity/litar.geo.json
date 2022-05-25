@@ -1,0 +1,57 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.litar",
+				"texture_width": 1024,
+				"texture_height": 1024,
+				"visible_bounds_width": 48,
+				"visible_bounds_height": 34,
+				"visible_bounds_offset": [0, 14, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 400, -133], "size": [16, 80, 16], "uv": [0, 0]},
+						{"origin": [-7, 400, -149], "size": [16, 16, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-56, -32, -56], "size": [112, 224, 112], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "neck",
+					"parent": "main",
+					"pivot": [0, 192, 0],
+					"cubes": [
+						{"origin": [-40, 196.1806, -57.0847], "size": [80, 160, 80], "inflate": -1, "pivot": [0, 192, 0], "rotation": [27.5, 0, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "neck",
+					"pivot": [0, 333, -85],
+					"cubes": [
+						{"origin": [-40, 320, -245], "size": [80, 80, 160], "uv": [0, 0]},
+						{"origin": [-40, 304, -133], "size": [80, 16, 48], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "jaw",
+					"parent": "head",
+					"pivot": [1, 320, -133],
+					"cubes": [
+						{"origin": [-40, 304, -245], "size": [80, 16, 112], "pivot": [1, 320, -133], "rotation": [5, 0, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}
