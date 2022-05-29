@@ -1,10 +1,10 @@
 {
-    "format_version": "1.8.0",
+    "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
             "identifier": "lostworld:litar",
             "materials": {
-                "default": "entity"
+                "default": "entity_alphatest_one_sided"
             },
             "render_controllers": [
                 "controller.render.default"
