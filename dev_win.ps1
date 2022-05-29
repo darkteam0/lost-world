@@ -6,8 +6,8 @@ $MOJANG = Get-Location
 Set-Location $CURRENT
 
 $PACK_NAME = "§l§2Lost World"
-$DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME\"
-$DEV_RP = "$MOJANG\development_resource_packs\$PACK_NAME\"
+$DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME §6BP\"
+$DEV_RP = "$MOJANG\development_resource_packs\$PACK_NAME §6RP\"
 
 $SRC = ".\src\"
 $SRC_BP = "$SRC\BP\"

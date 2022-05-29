@@ -1,2 +1,5 @@
 entity.lostworld:unknow.name=Unknow
 item.spawn_egg.entity.lostworld:unknow.name=Spawn Unknow
+
+entity.lostworld:litar.name=Litar
+item.spawn_egg.entity.lostworld:litar.name=Spawn Litar
