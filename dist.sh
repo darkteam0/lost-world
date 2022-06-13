@@ -1,9 +1,11 @@
-#                      **WARNING**
-#       TO RUN THE FOLLOWING SCRIPT ON AN ANDROID
-#           YOU NEED TO INSTALL TERMUX AND ZIP
+#                        **WARNING**
+#         TO RUN THE FOLLOWING SCRIPT ON AN ANDROID
+#             YOU NEED TO INSTALL TERMUX AND ZIP
 #
-# https://play.google.com/store/apps/details?id=com.termux
-# Open termux: pkg install zip
+# Install Termux:
+#   https://play.google.com/store/apps/details?id=com.termux
+# Install zip:
+#   Open termux: pkg install zip
 
 if [[ ! -e ./dist ]]; then
 
