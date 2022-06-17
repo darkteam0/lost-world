@@ -9,33 +9,32 @@ if ( $IsWindows ) {
 
     $PACK_NAME = "§l§2Lost World"
 
-    $DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME §6BP\"
-    $DEV_RP = "$MOJANG\development_resource_packs\$PACK_NAME §6RP\"
+    $DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME §6BP"
+    $DEV_RP = "$MOJANG\development_resource_packs\$PACK_NAME §6RP"
     
-    $SRC = ".\src\"
-    $SRC_BP = "$SRC\BP\"
-    $SRC_RP = "$SRC\RP\"
+    $SRC = ".\src"
+    $SRC_BP = "$SRC\BP"
+    $SRC_RP = "$SRC\RP"
     
     if ( Test-Path $DEV_BP ) {
 
-        mkdir $DEV_BP
+        New-Item $DEV_BP -ItemType "directory"
 
     } else {
 
-        Remove-Item $DEV_BP* -Recurse
+        Remove-Item $DEV_BP\* -Recurse
 
     }
 
     if ( Test-Path $DEV_RP ) {
 
-	    mkdir $DEV_RP
+	    New-Item $DEV_RP -ItemType "directory"
 
     } else {
 
-	Remove-Item $DEV_RP* -Recurse
+	Remove-Item $DEV_RP\* -Recurse
 
     }
-
 
     Copy-Item $SRC_BP\* $DEV_BP -Recurse
     Copy-Item $SRC_RP\* $DEV_RP -Recurse
