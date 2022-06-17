@@ -1,4 +1,20 @@
 if ( $IsWindows ) {
+    
+    function DevPaths {
+
+        param ( $Type )
+            
+            if ( !(Test-Path $Type) ) {
+            
+                New-Item $Type -ItemType "directory"
+            
+            } else {
+            
+                Remove-Item $Type\* -Recurse
+            
+            }
+
+    }
 
     $CURRENT = Get-Location
     $MOJANG = "~\AppData\Local\Packages\Microsoft.MinecraftUWP_**\LocalState\games\com.mojang"
@@ -7,34 +23,17 @@ if ( $IsWindows ) {
     $MOJANG = Get-Location
     Set-Location $CURRENT
 
-    $PACK_NAME = "§l§2Lost World"
+    $PACK_NAME = Get-Content .\artifact.txt -First 1
 
-    $DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME §6BP"
-    $DEV_RP = "$MOJANG\development_resource_packs\$PACK_NAME §6RP"
+    $DEV_BP = "$MOJANG\development_behavior_packs\$PACK_NAME"
+    $DEV_RP = "$MOJANG\development_resource_packs\$PACK_NAME"
     
     $SRC = ".\src"
     $SRC_BP = "$SRC\BP"
     $SRC_RP = "$SRC\RP"
     
-    if ( Test-Path $DEV_BP ) {
-
-        New-Item $DEV_BP -ItemType "directory"
-
-    } else {
-
-        Remove-Item $DEV_BP\* -Recurse
-
-    }
-
-    if ( Test-Path $DEV_RP ) {
-
-	    New-Item $DEV_RP -ItemType "directory"
-
-    } else {
-
-	Remove-Item $DEV_RP\* -Recurse
-
-    }
+    DevPaths $DEV_BP
+    DevPaths $DEV_RP
 
     Copy-Item $SRC_BP\* $DEV_BP -Recurse
     Copy-Item $SRC_RP\* $DEV_RP -Recurse
