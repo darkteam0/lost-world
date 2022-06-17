@@ -16,24 +16,33 @@ if ( $IsWindows ) {
     $SRC_BP = "$SRC\BP\"
     $SRC_RP = "$SRC\RP\"
     
-    if ( !(Test-Path $DEV_BP || Test-Path $DEV_RP) ) {
+    if ( Test-Path $DEV_BP ) {
 
         mkdir $DEV_BP
-        mkdir $DEV_RP
 
     } else {
 
-        Remove-Item $DEV_RP* -Recurse
         Remove-Item $DEV_BP* -Recurse
 
     }
+
+    if ( Test-Path $DEV_RP ) {
+
+	    mkdir $DEV_RP
+
+    } else {
+
+	Remove-Item $DEV_RP* -Recurse
+
+    }
+
 
     Copy-Item $SRC_BP\* $DEV_BP -Recurse
     Copy-Item $SRC_RP\* $DEV_RP -Recurse
 
     Write-Output "Files copied successfully"
 
-} elseif ( $IsMacOS || $IsLinux ) {
+} elseif ( $IsMacOS -or $IsLinux ) {
 
     Write-Output "Minecraft Bedrock Edition does not have versions for Unix systems like Linux distros and Mac OS yet"
 
